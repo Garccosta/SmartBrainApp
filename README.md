@@ -42,7 +42,8 @@ CREATE TABLE login (
 ```
 For the Front-End you must add your own API key in the controllers/image.js file to connect to Clarifai API.
 
-###You can grab Clarifai´s API key here: https://www.clarifai.com/
+### You can grab Clarifai´s API key here: 
+https://www.clarifai.com/
 
 
 ### Finally, run the steps below for each directory(front-end and back-end):
