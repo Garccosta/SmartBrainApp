@@ -40,8 +40,7 @@ CREATE TABLE login (
 	email text UNIQUE NOT NULL
 );
 ```
-
-###- For the Front-End you must add your own API key in the controllers/image.js file to connect to Clarifai API.
+For the Front-End you must add your own API key in the controllers/image.js file to connect to Clarifai API.
 You can grab Clarifai API key here: https://www.clarifai.com/
 
 
