@@ -20,9 +20,9 @@ const db = knex({
  ```
   
 ### 2- Create a new database and add tables for users and login on PostgresSQL:
-```  
+
  Users:
-  
+ ```  
   CREATE TABLE users (
 	id serial PRIMARY KEY,
 	name varchar(100),
@@ -31,9 +31,9 @@ const db = knex({
 	joined TIMESTAMP NOT NULL
 );
 ```
-```
-Login:
 
+Login:
+```
 CREATE TABLE login (
 	id serial PRIMARY KEY,
 	hash varchar(100) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE login (
 );
 ```
 For the Front-End you must add your own API key in the controllers/image.js file to connect to Clarifai API.
-You can grab Clarifai API key here: https://www.clarifai.com/
+You can grab Clarifai´s API key here: https://www.clarifai.com/
 
 
 ### Finally, run the steps below for each directory(front-end and back-end):
