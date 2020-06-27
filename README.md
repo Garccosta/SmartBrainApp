@@ -42,6 +42,7 @@ CREATE TABLE login (
 ```
 For the Front-End you must add your own API key in the controllers/image.js file to connect to Clarifai API.
 
+![alt text](https://github.com/Garccosta/SmartBrainApp/blob/master/clarifai-logo.png "clarifai logo")  
 ### You can grab Clarifai´s API key here: 
 https://www.clarifai.com/
 
