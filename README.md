@@ -1,12 +1,13 @@
 # SmartBrainApp
-To run this project locally:
 
-1-Clone this repo
+## To run this project locally:
 
-For the Backend you should do some other steps first:
+### Clone this repo
 
-2- Configure the database on the server.js file:
+For the Back-end you should do some other steps first:
 
+### 1- Configure the database on the server.js file:
+```
 const db = knex({
     client: 'pg',
     connection: {
@@ -16,11 +17,12 @@ const db = knex({
       database : ''
     }
   });
+ ```
   
-3- Create a new database and add tables for users and login on PostgresSQL:
-  
-  Users:
-  
+### 2- Create a new database and add tables for users and login on PostgresSQL:
+
+ Users:
+ ```  
   CREATE TABLE users (
 	id serial PRIMARY KEY,
 	name varchar(100),
@@ -28,19 +30,24 @@ const db = knex({
 	entries BIGINT DEFAULT 0,
 	joined TIMESTAMP NOT NULL
 );
+```
 
 Login:
-
+```
 CREATE TABLE login (
 	id serial PRIMARY KEY,
 	hash varchar(100) NOT NULL,
 	email text UNIQUE NOT NULL
 );
+```
+For the Front-End you must add your own API key in the controllers/image.js file to connect to Clarifai API.
 
-4- For the FrontEnd you must add your own API key in the controllers/image.js file to connect to Clarifai API.
-You can grab Clarifai API key here: https://www.clarifai.com/
+### You can grab Clarifai´s API key here: 
+https://www.clarifai.com/
 
 
-Finally, run the steps below for each directory(frontend and backend):
+### Finally, run the steps below for each directory(front-end and back-end):
+```
 -Run npm install
 -Run npm start
+```
