@@ -47,7 +47,7 @@ const particlesOptions = {
 const initialState = {
   input: '',
   imageUrl: '',
-  box: {},
+  box: [],
   route : 'signIn',
   isSignedIn: false,
   user: {
@@ -77,17 +77,20 @@ class App extends Component {
   }
 
   calculateFaceLocation = (data) => {
-    const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+    const clarifaiFace = data.outputs[0].data.regions;
+    const boxes = [];
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
-    console.log(clarifaiFace, image, width, height);
-    return {
-      leftCol: clarifaiFace.left_col * width,
-      topRow: clarifaiFace.top_row * height,
-      rightCol: width - clarifaiFace.right_col * width,
-      bottomRow: height - clarifaiFace.bottom_row * height
-    }
+    clarifaiFace.forEach(region => { 
+      boxes.push({
+        leftCol: region.region_info.bounding_box.left_col * width,
+        topRow: region.region_info.bounding_box.top_row * height,
+        rightCol: width - region.region_info.bounding_box.right_col * width,
+        bottomRow: height - region.region_info.bounding_box.bottom_row * height
+      })
+    });
+    return boxes;
   }
 
   displayFaceBox  = (box) => {
@@ -122,7 +125,7 @@ class App extends Component {
         this.setState(Object.assign(this.state.user,{ entries: count }))
       })
       .catch(console.log);
-    }
+    }   
       this.displayFaceBox(this.calculateFaceLocation(response))
     })
       .catch(err => console.log(err))
