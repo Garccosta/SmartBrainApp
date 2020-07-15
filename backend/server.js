@@ -2,22 +2,14 @@ const express = require('express');
 const bcrypt = require('bcrypt-nodejs')
 const cors = require('cors');
 const knex = require('knex')
+const connection = require('./knexfile');
 
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-const db = knex({
-    client: 'pg',
-    connection: {
-      host : '127.0.0.1',
-      user : '',
-      password : '',
-      database : ''
-    }
-  });
-
+const db = knex(connection.development);
 
 const app = express();
 
