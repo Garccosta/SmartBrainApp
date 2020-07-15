@@ -1,15 +1,15 @@
 # SmartBrainApp
 
-## To run this project locally:
-
-### Clone this repo
-
 *Version 1.1 is out! New functionalities:
 
 - Now with knex migrations so the database management will be much easier;
-- Added multiple face detection
+- Added multiple face detection.
 
 Have fun ;)
+
+## To run this project locally:
+
+### Clone this repo
 
 For the Back-end you should do some other steps first:
 
