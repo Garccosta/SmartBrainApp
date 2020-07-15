@@ -11,6 +11,10 @@ Have fun ;)
 
 ### Clone this repo
 
+```
+-Run npm install for each directory(front-end and back-end);
+```
+
 For the Back-end you should do some other steps first:
 
 ### 1- Configure the database on the knexfile.js file:
@@ -40,6 +44,5 @@ https://www.clarifai.com/
 
 ### Finally, run the steps below for each directory(front-end and back-end):
 ```
--Run npm install
 -Run npm start
 ```
