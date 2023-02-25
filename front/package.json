@@ -7,7 +7,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-particles-js": "^2.7.1",
-    "react-scripts": "3.4.0",
+    "react-scripts": "5.0.1",
     "react-tilt": "^0.1.4",
     "serialize-javascript": "^4.0.0",
     "tachyons": "^4.12.0"
