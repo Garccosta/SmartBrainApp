@@ -38,7 +38,7 @@ Just run: "npx knex migrate:latest"
 Done! All the tables will be created.
 ```
 
-For the Front-End you must add your own API key in the controllers/image.js file to connect to Clarifai API.
+You must add your own API key in the controllers/image.js file on api/core project to connect to Clarifai API.
 
 ### You can grab Clarifai´s API key here: 
 https://www.clarifai.com/
