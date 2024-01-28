@@ -17,30 +17,20 @@ Have fun ;)
 
 For the Back-end you should do some other steps first:
 
-### 1- Configure the database on the knexfile.js file:
-```
-  development: {
-    client: 'pg',
-    connection: {
-      host : '127.0.0.1',
-      user : '',
-      password : '',
-      database : ''
-    }
-  });
- ```
-  
-### 2- Create a new database and add tables for users and login on PostgresSQL:
+### 1- Configure the database connection on the knexfile.js file or leave the default one;
+
+### 2- Run the DB instance using docker compose and run the migrations:
 
 ```  
-Just run: "npx knex migrate:latest"
+First run "docker compose up -d" for creating the docker instance of the postgres DB;
+Finally run "npx knex migrate:latest" to run the migrations and so create the necessary tables on the DB;
 
 Done! All the tables will be created.
 ```
 
-You must add your own API key in the controllers/image.js file on api/core project to connect to Clarifai API.
+You must add your own PAT key in the controllers/image.js file on api/core project to connect to Clarifai API.
 
-### You can grab Clarifai´s API key here: 
+### You can grab Clarifai´s PAT key here: 
 https://www.clarifai.com/
 
 
