@@ -1,9 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+/api/core/node_modules
+/front/node_modules
 
 # testing
 /coverage
@@ -18,6 +17,6 @@
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+/api/core/npm-debug.log*
+/front/yarn-debug.log*
+/front/yarn-error.log*
