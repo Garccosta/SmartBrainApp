@@ -1,6 +1,6 @@
 # SmartBrainApp
 
-*Version 1.1 is out! New functionalities:
+\*Version 1.1 is out! New functionalities:
 
 - Now with knex migrations so the database management will be much easier;
 - Added multiple face detection.
@@ -12,7 +12,7 @@ Have fun ;)
 ### Clone this repo
 
 ```
--Run npm install for each directory(front-end and back-end);
+- Run npm ci for each directory(front-end and back-end) to install the exact dependencies versions from the project;
 ```
 
 For the Back-end you should do some other steps first:
@@ -21,7 +21,7 @@ For the Back-end you should do some other steps first:
 
 ### 2- Run the DB instance using docker compose and run the migrations:
 
-```  
+```
 First run "docker compose up -d" for creating the docker instance of the postgres DB;
 Finally run "npx knex migrate:latest" to run the migrations and so create the necessary tables on the DB;
 
@@ -30,11 +30,14 @@ Done! All the tables will be created.
 
 You must add your own PAT key in the controllers/image.js file on api/core project to connect to Clarifai API.
 
-### You can grab Clarifai´s PAT key here: 
+### You can grab Clarifai´s PAT key here:
+
 https://www.clarifai.com/
 
-
 ### Finally, run the steps below for each directory(front-end and back-end):
+
 ```
+Before running the projects, make sure you are using node version 16. You can do it by installing nvm and running nvm use in repository root folder.
+After that:
 -Run npm start
 ```
