@@ -4,7 +4,7 @@ const modelUrl = "https://clarifai.com/clarifai/main/models/face-detection";
 const detectorModel = new Model({
   url: modelUrl,
   authConfig: {
-    pat: process.env.PAT,
+    pat: process.env.CLARIFAI_PAT,
   },
 });
 

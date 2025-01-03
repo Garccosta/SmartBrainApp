@@ -12,7 +12,7 @@ Have fun ;)
 ### Clone this repo
 
 ```
-- Run npm ci for each directory(front-end and back-end) to install the exact dependencies versions from the project;
+- Run npm i for each directory(front-end and back-end);
 ```
 
 For the Back-end you should do some other steps first:
@@ -28,7 +28,7 @@ Finally run "npx knex migrate:latest" to run the migrations and so create the ne
 Done! All the tables will be created.
 ```
 
-You must add your own PAT key in the controllers/image.js file on api/core project to connect to Clarifai API.
+You must add your own CLARIFAI_PAT key in the .env file on api/core project to connect to Clarifai API.
 
 ### You can grab Clarifai´s PAT key here:
 
@@ -37,7 +37,5 @@ https://www.clarifai.com/
 ### Finally, run the steps below for each directory(front-end and back-end):
 
 ```
-Before running the projects, make sure you are using node version 16. You can do it by installing nvm and running nvm use in repository root folder.
-After that:
 -Run npm start
 ```
