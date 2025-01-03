@@ -1,16 +1,22 @@
+const dotenv = require("dotenv");
+const dotenvExpand = require("dotenv-expand");
+dotenvExpand.expand(dotenv.config());
+
 const express = require("express");
 const bcrypt = require("bcrypt-nodejs");
 const cors = require("cors");
 const knex = require("knex");
 const connection = require("./knexfile");
-require("dotenv").config();
 
 const register = require("./controllers/register");
 const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
 const image = require("./controllers/image");
 
-const db = knex(connection.development);
+const { development, production } = connection;
+const env = process.env.NODE_ENV;
+
+const db = knex(env === "production" ? production : development);
 
 const app = express();
 

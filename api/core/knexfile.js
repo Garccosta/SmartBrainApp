@@ -2,9 +2,9 @@
 
 module.exports = {
   development: {
-    client: "postgresql",
+    client: "pg",
     connection: {
-      host: "127.0.0.1",
+      host: "localhost",
       user: "user",
       password: "pass",
       database: "my_db",
@@ -13,29 +13,10 @@ module.exports = {
       directory: "./migrations",
     },
   },
-
-  staging: {
-    client: "postgresql",
-    connection: {
-      database: "my_db",
-      user: "user",
-      password: "pass",
-    },
-    pool: {
-      min: 2,
-      max: 10,
-    },
-    migrations: {
-      tableName: "knex_migrations",
-    },
-  },
-
   production: {
-    client: "postgresql",
+    client: "pg",
     connection: {
-      database: "my_db",
-      user: "user",
-      password: "pass",
+      connectionString: process.env.DATABASE_URL,
     },
     pool: {
       min: 2,
