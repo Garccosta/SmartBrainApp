@@ -28,7 +28,7 @@ Finally run "npx knex migrate:latest" to run the migrations and so create the ne
 Done! All the tables will be created.
 ```
 
-You must add your own CLARIFAI_PAT key in the .env file on api/core project to connect to Clarifai API.
+You must add your own CLARIFAI_PAT key in the .env file on api/core project to connect to Clarifai API. Also you should add the REACT_APP_API_URL on the FE .env, if is a local run, just put http://localhost:3333 in it.
 
 ### You can grab Clarifai´s PAT key here:
 
