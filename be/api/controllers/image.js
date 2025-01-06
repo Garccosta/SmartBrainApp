@@ -15,6 +15,7 @@ const handleApiCall = async (req, res) => {
       inputType: "image",
     })
     .catch((err) => {
+      console.log("ERROR when calling API: ", err);
       res.status(400).json("Unable to work with the API.");
     });
 
