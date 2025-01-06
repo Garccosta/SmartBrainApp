@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/api/core/node_modules
+/be/api/node_modules
 /front/node_modules
 
 # testing

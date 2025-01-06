@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send(db.users);
+  res.json({ message: "It is working!" });
 });
 app.post("/signin", (req, res) => {
   signin.handleSignIn(req, res, db, bcrypt);
@@ -45,3 +45,5 @@ app.post("/imageurl", (req, res) => {
 app.listen(3333, () => {
   console.log("App is running on port 3333");
 });
+
+module.exports = app;
